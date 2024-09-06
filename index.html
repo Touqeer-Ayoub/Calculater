@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function display(val){
+         document.getElementById("result").value +=val;
+        }
+        
+        function calculate(){
+            var a =document.getElementById('result').value;
+            var b =eval (a)
+            document.getElementById('result').value = b;
+        }
+        function clr(){
+            document.getElementById('result').value = "";
+        }
+        function dle(){
+            result.value=result.value.slice(0,-1);
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <h1>Casio</h1>
+        <table>
+            <tr>
+                <input type="text" placeholder="0&nbsp;" id="result">
+            </tr>
+            <tr class="link1">
+                <td><button onclick="clr()">AC</button></td>
+                <td><button onclick="dle()">DEL</button></td>
+                <td><button onclick="display('%')">%</button></td>
+                <td><button onclick="display('/')">/</button></td>
+                
+            </tr>
+            <tr>
+                <td><button onclick="display('7')">7</button></td>
+                <td><button onclick="display('8')">8</button></td>
+                <td><button onclick="display('9')">9</button></td>
+                <td class="link1"><button onclick="display('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="display('4')">4</button></td>
+                <td><button onclick="display('5')">5</button></td>
+                <td><button onclick="display('6')">6</button></td>
+                <td class="link1"><button onclick="display('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="display('1')">1</button></td>
+                <td><button onclick="display('2')">2</button></td>
+                <td><button onclick="display('3')">3</button></td>
+                <td class="link1"><button onclick="display('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="display('0')">0</button></td>
+                <td><button onclick="display('00')">00</button></td>
+                <td><button onclick="display('.')">.</button></td>
+                <td class="link1"><button onclick="calculate()">=</button></td>
+            </tr>    
+        </table>
+    </fieldset>
+    
+</body>
+</html>
